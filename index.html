@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MiniMercado</title>
+        <script src="https://kit.fontawesome.com/ba947dbd90.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./css/style.css">
+
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Produtos</a></li>
+                    <li><a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+            <div class="carousel">
+                <div class="carousel-container">
+                    <div class="carousel-item">
+                        <img src="promo1.jpg" alt="Promoção 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="promo2.jpg" alt="Promoção 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="promo3.jpg" alt="Promoção 3">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="products" id="productsSection">
+                <div class="product">
+                    <img src="product1.jpg" alt="Produto 1">
+                    <h3>Produto 1</h3>
+                    <p class="price">$19.99</p>
+                    <p class="stock">Em estoque: 15</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="product2.jpg" alt="Produto 2">
+                    <h3>Produto 2</h3>
+                    <p class="price">$10.99</p>
+                    <p class="stock">Em estoque: 15</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="product">
+                    <img src="product3.jpg" alt="Produto 3">
+                    <h3>Produto 3</h3>
+                    <p class="price">$39.99</p>
+                    <p class="stock">Em estoque: 15</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+                <!-- Adicione mais produtos semelhantes aqui -->
+
+            </section>
+        </main>
+
+
+
+        <div class="cart-page">
+            <h2>Itens no Carrinho</h2>
+            <ul class="cart-items">
+                <!-- Itens do carrinho serão adicionados aqui dinamicamente com JavaScript -->
+            </ul>
+            <p class="total">Total da Compra: $<span class="total-amount">0.00</span></p>
+        </div>
+
+        <aside id="contact">
+            <div class="contact-container">
+                <div class="contact-division" id="cd-1">
+                    <h2>Contatos</h2>
+                </div>
+                <div class="contact-division" id="cd-2">
+                    <h4>Endereço</h4>
+                    <a id="address-img" href="https://goo.gl/maps/mkDdKVA98cWM2Dym7" target="_blank"><img src="#" alt="mapa"></a>
+                    <a href="https://goo.gl/maps/mkDdKVA98cWM2Dym7" target="_blank">Fictício</a>
+                </div>
+                <div class="contact-division" id="cd-3">
+                    <div class="social-btn">
+                        <a href="#" target="_blank" class="btn whatsapp-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/sampaiosamuel09/" target="_blank" class="btn instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank" class="btn linkedin"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Samueldnz" target="_blank" class="btn git">
+                            <i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank" class="btn gmail"><i class="far fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <footer>
+            <p>&copy; 2023 Sampaio Brothers - Construído por <i><a href="https://www.instagram.com/sampaiosamuel09/" target="_blank">@sampaiosamuel09</a></i> <i class="fab fa-instagram instagram-icon"></i></p>
+        </footer>
+        
+        <script src="carousel.js"></script>
+        <script src="cart.js"></script>
+    </body>
+</html>
