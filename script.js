@@ -35,7 +35,8 @@ let carrinho = [];
             itensCarrinhoNav.appendChild(listItem);
 
             document.getElementById("total-nav").innerText = total;
-            document.querySelector(".carrinho-contador").innerText = carrinho.length;
+            atualizarContadorCarrinho();
+            // document.querySelector(".carrinho-contador").innerText = carrinho.length;
         }
 
         function incrementarQuantidade(index, preco) {
@@ -56,6 +57,7 @@ let carrinho = [];
             total -= carrinho[index].quantidade * preco;
             carrinho.splice(index, 1);
             atualizarListaCarrinho();
+            atualizarContadorCarrinho();
         }
 
         function atualizarListaCarrinho() {
@@ -69,6 +71,10 @@ let carrinho = [];
             });
         
             document.getElementById("total-nav").innerText = total;
+        }
+
+        function atualizarContadorCarrinho() {
+            document.querySelector(".carrinho-contador").innerText = carrinho.length;
         }
 
         function mostrarCarrinho() {
