@@ -31,7 +31,7 @@ let carrinho = [];
 
             const itensCarrinhoNav = document.getElementById("itens-carrinho-nav");
             const listItem = document.createElement("li");
-            listItem.innerHTML = `${nome} - R$${preco} - Quantidade: ${carrinho[carrinho.length - 1].quantidade} <button onclick="incrementarQuantidade(${carrinho.length - 1}, ${preco})">+</button> <button onclick="decrementarQuantidade(${carrinho.length - 1}, ${preco})">-</button> <button onclick="removerDoCarrinho(${carrinho.length - 1}, ${preco})"><i class="fas fa-trash"></i></button>`;
+            listItem.innerHTML = `${nome} - R$${preco} - Quantidade: ${carrinho[carrinho.length - 1].quantidade} <button class="botao-incrementar" onclick="incrementarQuantidade(${carrinho.length - 1}, ${preco})">+</button> <button class="botao-decrementar" onclick="decrementarQuantidade(${carrinho.length - 1}, ${preco})">-</button> <button class="botao-remover" onclick="removerDoCarrinho(${carrinho.length - 1}, ${preco})"><i class="fas fa-trash"></i></button>`;
             itensCarrinhoNav.appendChild(listItem);
 
             document.getElementById("total-nav").innerText = total;
@@ -66,7 +66,7 @@ let carrinho = [];
         
             carrinho.forEach((item, index) => {
                 const listItem = document.createElement("li");
-                listItem.innerHTML = `${item.nome} - R$${item.preco} - Quantidade: ${item.quantidade} <button onclick="incrementarQuantidade(${index}, ${item.preco})">+</button> <button onclick="decrementarQuantidade(${index}, ${item.preco})">-</button> <button onclick="removerDoCarrinho(${index}, ${item.preco})"><i class="fas fa-trash"></i></button>`;
+                listItem.innerHTML = `${item.nome} - R$${item.preco} - Quantidade: ${item.quantidade} <button class="botao-incrementar" onclick="incrementarQuantidade(${index}, ${item.preco})">+</button> <button class="botao-decrementar" onclick="decrementarQuantidade(${index}, ${item.preco})">-</button> <button class="botao-remover" onclick="removerDoCarrinho(${index}, ${item.preco})"><i class="fas fa-trash"></i></button>`;
                 itensCarrinhoNav.appendChild(listItem);
             });
         

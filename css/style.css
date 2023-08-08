@@ -138,6 +138,34 @@ body{
     width: 300px;
     text-align: center;
     margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#itens-carrinho-nav li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#itens-carrinho-nav button {
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    margin: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.botao-incrementar, .botao-decrementar {
+    background-color: #4caf50;
+}
+
+.botao-remover {
+    background-color: #e74c3c;
 }
 
 .contact-container{
