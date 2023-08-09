@@ -31,12 +31,16 @@ let carrinho = [];
 
             const itensCarrinhoNav = document.getElementById("itens-carrinho-nav");
             const listItem = document.createElement("li");
-            listItem.innerHTML = `${nome} - R$${preco} - Quantidade: ${carrinho[carrinho.length - 1].quantidade} <button class="botao-incrementar" onclick="incrementarQuantidade(${carrinho.length - 1}, ${preco})">+</button> <button class="botao-decrementar" onclick="decrementarQuantidade(${carrinho.length - 1}, ${preco})">-</button> <button class="botao-remover" onclick="removerDoCarrinho(${carrinho.length - 1}, ${preco})"><i class="fas fa-trash"></i></button>`;
+            listItem.innerHTML = 
+            `<p class="item-nome">${nome}</p> <p class="item.price">R$${preco}</p>
+            <button class="botao-decrementar" onclick="decrementarQuantidade(${carrinho.length - 1}, ${preco})">-</button> 
+            <span class="item.quantity">${carrinho[carrinho.length - 1].quantidade}</span> 
+            <button class="botao-incrementar" onclick="incrementarQuantidade(${carrinho.length - 1}, ${preco})">+</button> 
+            <button class="botao-remover" onclick="removerDoCarrinho(${carrinho.length - 1}, ${preco})"><i class="fas fa-trash"></i></button>`;
             itensCarrinhoNav.appendChild(listItem);
 
             document.getElementById("total-nav").innerText = total;
             atualizarContadorCarrinho();
-            // document.querySelector(".carrinho-contador").innerText = carrinho.length;
         }
 
         function incrementarQuantidade(index, preco) {
@@ -66,7 +70,13 @@ let carrinho = [];
         
             carrinho.forEach((item, index) => {
                 const listItem = document.createElement("li");
-                listItem.innerHTML = `${item.nome} - R$${item.preco} - Quantidade: ${item.quantidade} <button class="botao-incrementar" onclick="incrementarQuantidade(${index}, ${item.preco})">+</button> <button class="botao-decrementar" onclick="decrementarQuantidade(${index}, ${item.preco})">-</button> <button class="botao-remover" onclick="removerDoCarrinho(${index}, ${item.preco})"><i class="fas fa-trash"></i></button>`;
+                listItem.innerHTML = `
+                <p class="item-nome">${item.nome}</p>
+                <p class="item-price">R$${item.preco}</p>
+                <button class="botao-decrementar" onclick="decrementarQuantidade(${index}, ${item.preco})">-</button> 
+                <span class="item-quantity">${item.quantidade}</span> 
+                <button class="botao-incrementar" onclick="incrementarQuantidade(${index}, ${item.preco})">+</button> 
+                <button class="botao-remover" onclick="removerDoCarrinho(${index}, ${item.preco})"><i class="fas fa-trash"></i></button>`;
                 itensCarrinhoNav.appendChild(listItem);
             });
         

@@ -128,11 +128,11 @@ body{
 
 #carrinho-lista {
     display: none;
-    position: relative;
-    text-align: center;
+    /* position: relative; */
+    align-items: center;
     justify-content: center;
     background-color: #fff;
-    color: black;
+    /* color: black; */
     border: 1px solid #ccc;
     padding: 10px;
     width: 300px;
@@ -142,12 +142,16 @@ body{
     border-radius: 8px;
 }
 
+#itens-carrinho-nav{
+    padding: 0px;
+}
+
 #itens-carrinho-nav li {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    border-bottom: 1px solid #ccc;
+    border: 1px solid #ccc;
 }
 
 #itens-carrinho-nav button {
@@ -166,6 +170,8 @@ body{
 
 .botao-remover {
     background-color: #e74c3c;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 .contact-container{
