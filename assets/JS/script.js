@@ -101,3 +101,15 @@ let carrinho = [];
         }
 
 
+        function toggleSubmenu() {
+            event.preventDefault();
+            const produtosSubcategorias = document.querySelector('.produtos-subcategorias');
+            const setinhaProdutos = document.querySelector('.menu .submenu-produtos .fa-caret-down');
+            if (produtosSubcategorias.style.display === 'block') {
+                produtosSubcategorias.style.display = 'none';
+                setinhaProdutos.style.transform = 'rotate(0deg)';
+            } else {
+                produtosSubcategorias.style.display = 'block';
+                setinhaProdutos.style.transform = 'rotate(180deg)';
+            }
+        }

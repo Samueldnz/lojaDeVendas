@@ -13,10 +13,27 @@
         <nav>
             <ul class="menu">
                 <li><a href="#">Início <i class="fas fa-home"></i></a></li>
-                <li><a href="#">Produtos <i class="fas fa-store"></i></a></li>
+                <li class="submenu-produtos" onclick="toggleSubmenu()">
+                    <a href="#"> <i class="fas fa-caret-down"></i> Produtos <i class="fas fa-store"></i></a>
+                    <ul class="produtos-subcategorias">
+                        <li class="subcatergoria-item"><a href="#">Carnes e Ovos</a></li>
+                        <li class="subcatergoria-item"><a href="#">Produtos Lácteos</a></li>
+                        <li class="subcatergoria-item"><a href="#">Grãos e Cereais</a></li>
+                        <li class="subcatergoria-item"><a href="#">Frutas</a></li>
+                        <li class="subcatergoria-item"><a href="#">Legumes e Verduras</a></li>
+                        <li class="subcatergoria-item"><a href="#">Panificação</a></li>
+                        <li class="subcatergoria-item"><a href="#">Bebidas</a></li>
+                        <li class="subcatergoria-item"><a href="#">Processados</a></li>
+                        <li class="subcatergoria-item"><a href="#">Codimentos e Temperos</a></li>
+                        <li class="subcatergoria-item"><a href="#">Saudáveis e Naturais</a></li>
+                        <li class="subcatergoria-item"><a href="#">Doces e Sobremesas</a></li>
+                    </ul>
+                </li>
                 <li><a href="#" onclick="mostrarCarrinho()">Carrinho <i class="fas fa-shopping-cart carrinho-icon"></i><span class="carrinho-contador">0</span></a></li>
             </ul>
         </nav>
+
+        <div id="espaco"></div><!-- Espaço reservado para a setinha -->
         <header>
             <div class="carousel">
                 <div class="carousel-container">

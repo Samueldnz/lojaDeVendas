@@ -25,6 +25,10 @@ nav{
     padding: 10px;
 }
 
+#espaco {
+    height: 70px; /* Altura igual à altura do nav */
+}
+
 .menu a{
     text-decoration: none;
     color: white;
@@ -35,6 +39,29 @@ nav{
 .menu span{
     margin-left: 5px;
     margin-top: -2px;
+}
+
+
+.produtos-subcategorias{
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px);
+    z-index: 100;
+    /* left: auto; */
+    background-color: #333;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* margin-top: 0; */
+}
+
+.menu .submenu-produtos .fa-caret-down{
+    transition: transform 0.3s;
+}
+
+.menu .produtos-subcategorias li {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
 }
 
 .carrinho-icon {
